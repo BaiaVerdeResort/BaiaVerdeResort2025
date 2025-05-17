@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Baia Verde Resort - Official Website</title>
+  <style>
+    /* Remove margens e define fonte padrão */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Estilo do cabeçalho */
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: relative; /* Para posicionar o botão dentro */
+    }
+
+    
+
+    
+
+    /* Efeito ao passar o mouse */
+    nav a:hover {
+      background-color: #0059b3;
+    }
+
+    /* Centraliza título com espaço para o botão */
+    h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .reservar-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 10px 20px;
+    background-color: #ff0000; /* Cor do botão - altere se necessário */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+  </style>
+</head>
+<body>
+
+<button class="reservar-btn">Reservar</button>
+
+
+<!-- 
+  HEADER COMPONENT WITH LOGO AND BOOKING BUTTON
+  =============================================
+  This header contains:
+  - A clickable logo/title that returns to top
+  - A booking button
+  - Hover and click effects
+-->
+
+<!-- HTML STRUCTURE -->
+<header>
+
+  <!-- 
+  MENU DROPDOWN PARA CABEÇALHO
+  ==============================
+  Código completo para menu dropdown no lado esquerdo da logo
+  Contém: HTML, CSS (inline) e JavaScript
+-->
+
+<!-- 
+  HTML - ESTRUTURA DO MENU
+  -------------------------
+  Contém:
+  - Container principal do dropdown
+  - Botão de ativação do menu
+  - Lista de itens do menu
+-->
+<div class="dropdown-menu" 
+     style="position:relative;display:inline-block;z-index:1000;">
+     
+  <!-- Botão de ativação do dropdown (ícone ☰) -->
+  <button class="dropdown-btn" 
+          style="background-color:transparent;color:white;border:none;padding:10px 15px;font-size:1rem;cursor:pointer;transition:all 0.3s;border-radius:4px;" 
+          onmouseover="this.style.backgroundColor='rgba(255,255,255,0.1)'" 
+          onmouseout="this.style.backgroundColor='transparent'"
+          onclick="this.parentElement.classList.toggle('active'); event.stopPropagation();">
+    ☰ Menu
+  </button>
+
+ <!-- Style dropdown (ícone ☰) --> 
+ <!-- Style dropdown (ícone ☰) --> 
+ <!-- Style dropdown (ícone ☰) --> 
+  <style>
+    @media (max-width: 768px) {
+  /* Ajusta o header para mobile */
+  header {
+    padding: 15px;
+    justify-content: space-between;
+  }
+
+  /* Posiciona o dropdown menu mais à direita */
+  .dropdown-menu {
+    position: absolute;
+    left: auto;
+    right: 100px; /* Ajuste conforme necessário */
+    top: 15px;
+  }
+
+  /* Reduz o tamanho do botão Reservar em mobile */
+  .reservar-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    top: 15px;
+    right: 15px;
+  }
+
+  /* Ajusta o ícone do menu para mobile */
+  .dropdown-btn {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  /* Ajusta a logo para mobile */
+  .logo-title {
+    font-size: 1.2rem;
+    left: 15px;
+    top: 15px;
+  }
+}
+  </style>
+  <!-- Style dropdown (ícone ☰) --> 
+ <!-- Style dropdown (ícone ☰) --> 
+ <!-- Style dropdown (ícone ☰) --> 
+
+  
+  <!-- Conteúdo do dropdown (inicialmente oculto) -->
+  <div class="dropdown-content" 
+       style="display:none;position:absolute;background-color:#003366;min-width:200px;box-shadow:0px 8px 16px rgba(0,0,0,0.2);border-radius:4px;left:0;top:100%;opacity:0;transform:translateY(-10px);transition:opacity 0.3s,transform 0.3s;">
+    
+    <!-- Lista de links de navegação -->
+    <ul style="list-style:none;padding:0;margin:0;">
+      <li>
+        <a href="#acomodacoes" 
+           style="color:white;padding:12px 16px;text-decoration:none;display:block;transition:background 0.3s;" 
+           onmouseover="this.style.backgroundColor='#0059b3'" 
+           onmouseout="this.style.backgroundColor='transparent'">
+           Quartos
+        </a>
+      </li>
+      <li>
+        <a href="#spa" 
+           style="color:white;padding:12px 16px;text-decoration:none;display:block;transition:background 0.3s;" 
+           onmouseover="this.style.backgroundColor='#0059b3'" 
+           onmouseout="this.style.backgroundColor='transparent'">
+           Spa
+        </a>
+      </li>
+      <li>
+        <a href="https://apollotourscv.github.io/ApolloToursCV/" 
+           style="color:white;padding:12px 16px;text-decoration:none;display:block;transition:background 0.3s;" 
+           onmouseover="this.style.backgroundColor='#0059b3'" 
+           onmouseout="this.style.backgroundColor='transparent'">
+           Atividades
+        </a>
+      </li>
+      <li>
+        <a href="#" 
+           style="color:white;padding:12px 16px;text-decoration:none;display:block;transition:background 0.3s;" 
+           onmouseover="this.style.backgroundColor='#0059b3'" 
+           onmouseout="this.style.backgroundColor='transparent'">
+           Galeria
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- 
+  JAVASCRIPT - COMPORTAMENTO DO MENU
+  ----------------------------------
+  Contém:
+  - Fechamento do menu ao clicar fora
+  - Controle de abertura/fechamento
+-->
+<script>
+// Fecha o dropdown quando se clica em qualquer área fora do menu
+document.addEventListener('click', function(e) {
+  const dropdowns = document.querySelectorAll('.dropdown-menu');
+  
+  dropdowns.forEach(dropdown => {
+    if (!dropdown.contains(e.target)) {
+      // Fecha o menu removendo a classe 'active' e resetando estilos
+      dropdown.classList.remove('active');
+      const content = dropdown.querySelector('.dropdown-content');
+      content.style.display = 'none';
+      content.style.opacity = '0';
+      content.style.transform = 'translateY(-10px)';
+    }
+  });
+});
+
+// Controla a abertura/fechamento do dropdown
+document.querySelectorAll('.dropdown-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const dropdown = this.parentElement;
+    const content = dropdown.querySelector('.dropdown-content');
+    
+    if (dropdown.classList.contains('active')) {
+      // Animação de abertura
+      content.style.display = 'block';
+      content.style.opacity = '1';
+      content.style.transform = 'translateY(0)';
+    } else {
+      // Animação de fechamento
+      content.style.display = 'none';
+      content.style.opacity = '0';
+      content.style.transform = 'translateY(-10px)';
+    }
+  });
+});
+</script>
+
+<!-- 
+  COMENTÁRIOS ADICIONAIS:
+  ------------------------
+  1. O CSS está inline para manter tudo em um único bloco
+  2. Os eventos onmouseover/out estão inline para os efeitos hover
+  3. O JavaScript controla:
+     - O fechamento quando se clica fora
+     - As animações de abertura/fechamento
+  4. O z-index:1000 garante que o menu fique acima de outros elementos
+  5. event.stopPropagation() previne fechamento imediato ao clicar no botão
+-->
+
+
+
+
+
+
+
+
+
+
+
+<!-- Logo/Title that scrolls to top when clicked -->
+<!-- Logo/Title that scrolls to top when clicked -->
+<!-- Logo/Title that scrolls to top when clicked -->
+<!-- Logo/Title that scrolls to top when clicked -->
+<!-- Logo/Title that scrolls to top when clicked -->
+<!-- Logo/Title that scrolls to top when clicked -->
+  <a href="#" class="logo-title">Baia Verde Resort</a>
+  
+  <!-- Booking Button -->
+  <button class="reservar-btn">Reservar</button>
+</header>
+
+<!-- CSS STYLES -->
+<style>
+  .logo-title {
+  position: absolute;  /* Permite posicionamento livre */
+  left: 20px;         /* Distância da esquerda */
+  /* Mantenha todo o resto do seu CSS atual da logo aqui */
+}
+
+  /* Header container styles */
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #004080; /* Dark blue background */
+    color: white;
+    padding: 20px;
+  }
+
+  /* Logo/Title styles */
+  .logo-title {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    cursor: pointer;
+    text-align: center;
+  }
+
+  /* Hover effects for logo */
+  .logo-title:hover {
+    color: #f8f8f8; /* Slightly lighter white */
+    transform: scale(1.05); /* Gentle zoom effect */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5); /* Enhanced shadow */
+  }
+
+  /* Active/click effects for logo */
+  .logo-title:active {
+    transform: scale(0.98); /* Subtle press effect */
+  }
+
+  /* Booking button styles */
+  .reservar-btn {
+    position: absolute;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #ff0000; /* Red button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+</style>
+
+<!-- JAVASCRIPT FUNCTIONALITY -->
+<script>
+  // Smooth scroll to top when logo is clicked
+  document.querySelector('.logo-title').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent default anchor behavior
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Smooth scrolling animation
+    });
+  });
+
+  
+</script>
+<!-- 
+  HEADER COMPONENT WITH LOGO AND BOOKING BUTTON
+  =============================================
+  This header contains:
+  - A clickable logo/title that returns to top
+  - A booking button
+  - Hover and click effects
+-->
+
+
+
+<!-- SEÇÃO DE ACOMODAÇÕES COMPACTA -->
+<section id="acomodacoes" class="massagem-section">
+  <div class="container">
+    <h2>Nossas Acomodações</h2>
+    <p class="section-description">
+      Conheça nossos quartos e escolha o ideal para sua estadia
+    </p>
+    
+    <div class="quartos-grid-compact">
+      <!-- Quarto Duplo -->
+      <div class="quarto-compact">
+        <div class="slideshow-compact">
+          <img src="double00.jpg" alt="Quarto Duplo" class="active">
+          <img src="double01.jpg" alt="Quarto Duplo" class="active">
+          <img src="double02.jpg" alt="Quarto Duplo" class="active">
+          <img src="double03.jpg" alt="Quarto Duplo" class="active">
+          <img src="double04.jpg" alt="Quarto Duplo" class="active">
+          <img src="double05.jpg" alt="Quarto Duplo" class="active">
+          <img src="double06.jpg" alt="Quarto Duplo" class="active">
+          <button class="slide-nav prev" onclick="navigateSlide(this.parentNode, -1)">‹</button>
+          <button class="slide-nav next" onclick="navigateSlide(this.parentNode, 1)">›</button>
+        </div>
+        <div class="quarto-info-compact">
+          <h3>Quarto Duplo</h3>
+          <p><strong>1 Cama de Casal</strong></p>
+          <div class="preco-compact">A partir de <span>5.000$00</span> por noite</div>
+        </div>
+      </div>
+      
+      <!-- Quarto Individual -->
+      <div class="quarto-compact">
+        <div class="slideshow-compact">
+          <img src="twin0.jpg" alt="Quarto Individual" class="active">
+          <img src="twin00.jpg" alt="Quarto Individual" class="active">
+          <img src="twin01.jpg" alt="Quarto Individual" class="active">
+          <img src="twin02.jpg" alt="Quarto Individual" class="active">
+          <img src="twin03.jpg" alt="Quarto Individual" class="active">
+          <img src="twin04.jpg" alt="Quarto Individual" class="active">
+          <img src="twin05.jpg" alt="Quarto Individual" class="active">
+          <button class="slide-nav prev" onclick="navigateSlide(this.parentNode, -1)">‹</button>
+          <button class="slide-nav next" onclick="navigateSlide(this.parentNode, 1)">›</button>
+        </div>
+        <div class="quarto-info-compact">
+          <h3>Quarto Twin</h3>
+          <p><strong>2 Camas Individuais</strong></p>
+          <div class="preco-compact">A partir de <span>5.000$00</span> / noite</div>
+        </div>
+      </div>
+      
+      <!-- Quarto Familiar -->
+      <div class="quarto-compact">
+        <div class="slideshow-compact">
+          <img src="duplex00.jpg" alt="Quarto Familiar" class="active">
+          <img src="duplex02.jpg" alt="Quarto Familiar" class="active">
+          <img src="duplex03.jpg" alt="Quarto Familiar" class="active">
+          <img src="duplex04.jpg" alt="Quarto Familiar" class="active">
+          <img src="duplex05.jpg" alt="Quarto Familiar" class="active">
+          <img src="duplex06.jpg" alt="Quarto Familiar" class="active">
+          <img src="duplex07.jpg" alt="Quarto Familiar" class="active">
+          <img src="duplex08.jpg" alt="Quarto Familiar" class="active">
+          <button class="slide-nav prev" onclick="navigateSlide(this.parentNode, -1)">‹</button>
+          <button class="slide-nav next" onclick="navigateSlide(this.parentNode, 1)">›</button>
+        </div>
+        <div class="quarto-info-compact">
+          <h3>Duplex</h3>
+          <p><strong>1 Cama de Solteiro + 1 Cama de Casal</strong></p>
+          <div class="preco-compact">A partir de <span>10.000$00</span> / noite</div>
+        </div>
+      </div>
+
+      <!-- Quarto Individual -->
+      <div class="quarto-compact">
+        <div class="slideshow-compact">
+          <img src="familiar.jpg" alt="Quarto Familiar" class="active">
+          <button class="slide-nav prev" onclick="navigateSlide(this.parentNode, -1)">‹</button>
+          <button class="slide-nav next" onclick="navigateSlide(this.parentNode, 1)">›</button>
+        </div>
+        <div class="quarto-info-compact">
+          <h3>Individual</h3>
+          <p><strong>1 Cama de Solteiro</strong></p>
+          <div class="preco-compact">A partir de <span>5.000$00</span> / noite</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Estilo Compacto para Acomodações */
+  .quartos-grid-compact {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .quarto-compact {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .slideshow-compact {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+  }
+  
+  .slideshow-compact img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .slideshow-compact img.active {
+    opacity: 1;
+  }
+  
+  .slide-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    width: 25px;
+    height: 35px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 3px;
+  }
+  
+  .slide-nav.prev { left: 5px; }
+  .slide-nav.next { right: 5px; }
+  
+  .slide-nav:hover {
+    background: rgba(0,0,0,0.8);
+  }
+  
+  .quarto-info-compact {
+    padding: 15px;
+  }
+  
+  .quarto-info-compact h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: #004080;
+  }
+  
+  .quarto-info-compact p {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .preco-compact {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+  .preco-compact span {
+    font-weight: bold;
+    color: #e74c3c;
+  }
+  
+  .btn-descricao, .btn-reserva {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .btn-descricao {
+    background: #f0f0f0;
+    color: #333;
+  }
+  
+  .btn-reserva {
+    background: #e74c3c;
+    color: white;
+  }
+  
+  .btn-descricao:hover {
+    background: #e0e0e0;
+  }
+  
+  .btn-reserva:hover {
+    background: #c0392b;
+  }
+  
+  @media (max-width: 1024px) {
+    .quartos-grid-compact {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .quartos-grid-compact {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  function navigateSlide(container, direction) {
+    const images = container.querySelectorAll('img');
+    let currentIndex = 0;
+    
+    // Find active image
+    images.forEach((img, index) => {
+      if (img.classList.contains('active')) {
+        currentIndex = index;
+        img.classList.remove('active');
+      }
+    });
+    
+    // Calculate new index
+    let newIndex = currentIndex + direction;
+    if (newIndex >= images.length) newIndex = 0;
+    if (newIndex < 0) newIndex = images.length - 1;
+    
+    // Activate new image
+    images[newIndex].classList.add('active');
+  }
+</script>
+
+
+<!-- Seção de Massoterapia - Igual ao Apollo Tours CV -->
+<section id="spa" class="massagem-section">
+  <div class="container">
+    <h2>Spa</h2>
+    <p class="section-description">
+      Descubra o poder transformador das nossas terapias manuais, projetadas para 
+      aliviar o stress, dores musculares e promover o equilíbrio corporal.
+    </p>
+
+    <div class="massagem-grid">
+      
+
+      <!-- Massagem Terapêutica -->
+      <div class="massagem-card">
+        <div class="massagem-img">
+          <img src="massage01.jpg" alt="Massagem Terapêutica">
+        </div>
+        <div class="massagem-content">
+          <h3>Hot Stone Massage</h3>
+          <p>Relieves tension and balances the body's energy.
+          </p>
+          <ul class="beneficios-list">
+            <li>60 min 5000 esc </li>
+            <li>90 min 7000 esc</li>
+          </ul>
+
+<style>
+  .fotos-descricao-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4CAF50; /* Verde - pode alterar para outra cor (ex: #2196F3 para azul) */
+    color: white;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .fotos-descricao-btn:hover {
+    background-color: #45a049; /* Tom escuro do verde */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .fotos-descricao-btn:active {
+    transform: translateY(0);
+  }
+</style>
+          <button class="btn-reserva">WhatsApp: 0033615364061</button>
+        </div>
+      </div>
+
+
+      <!-- Massagem com Pedras Quentes -->
+      <div class="massagem-card">
+        <div class="massagem-img">
+          <img src="massage02.jpg" alt="Massagem com Pedras Quentes">
+        </div>
+        <div class="massagem-content">
+          <h3>Intuitive Relaxation Massage</h3>
+          <p>
+             Movements adapted to the body's needs to relax.
+           </p>
+          <ul class="beneficios-list">
+            <li>30 min 2500 esc</li>
+            <li>60 min 4000 esc</li>
+            <li>90 min 6000 esc</li>
+          </ul>
+
+<style>
+  .fotos-descricao-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4CAF50; /* Verde - pode alterar para outra cor (ex: #2196F3 para azul) */
+    color: white;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .fotos-descricao-btn:hover {
+    background-color: #45a049; /* Tom escuro do verde */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .fotos-descricao-btn:active {
+    transform: translateY(0);
+  }
+</style>
+          <button class="btn-reserva">WhatsApp: 0033615364061</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CSS Específico para a Seção de Massagens -->
+<style>
+  .massagem-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .massagem-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .massagem-section h2 {
+    text-align: center;
+    color: #004080;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  .section-description {
+    text-align: center;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .massagem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+
+  .massagem-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .massagem-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .massagem-img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .massagem-content {
+    padding: 20px;
+  }
+
+  .massagem-content h3 {
+    color: #004080;
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+
+  .massagem-content p {
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .beneficios-list {
+    padding-left: 20px;
+    color: #444;
+  }
+
+  .beneficios-list li {
+    margin-bottom: 8px;
+  }
+
+  .btn-reserva {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .btn-reserva:hover {
+    background-color: #c0392b;
+  }
+
+  @media (max-width: 768px) {
+    .massagem-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+
+
+
+
+
+<!-- 
+  FOOTER STRUCTURE:
+  This footer is organized into 4 main sections (contact, quick links, social media, newsletter)
+  with a copyright bar at the bottom. It uses a clean, responsive design with hotel-appropriate styling.
+-->
+
+<footer class="site-footer">  <!-- Main footer container with dark blue background -->
+  <div class="footer-container">  <!-- Grid container for the footer sections -->
+    
+    <!-- ===== SECTION 1: CONTACT INFO ===== -->
+    <div class="footer-section">
+      <h3>Contato</h3>  <!-- Section title -->
+      <ul>
+        <!-- Contact items with emoji icons (consider using proper icon fonts for production) -->
+        <li><i class="icon">📌</i> Praia do Tarrafal, Cidade do Tarrafal - Ilha de Santiago, Cabo Verde</li>  <!-- Address -->
+        <li><i class="icon">📞</i> +238 529 37 21</li>  <!-- Phone -->
+        <li><i class="icon">✉️</i> baiaverde.penareia2024@gmail.com</li>  <!-- Email -->
+        <li><i class="icon">🕒</i> Recepção das 8Am - 9Pm</li>  <!-- Opening hours -->
+      </ul>
+    </div>
+    
+    <!-- ===== SECTION 2: QUICK LINKS ===== -->
+    <div class="footer-section">
+      <h3>Links Rápidos</h3>
+      <ul>
+        <!-- Navigation links - should point to actual page anchors -->
+        <li><a href="#acomodacoes">Quartos</a></li>  <!-- Rooms page -->
+        <li><a href="#spa">Spa</a></li>  <!-- Rooms page -->
+        <li><a href="https://apollotourscv.github.io/ApolloToursCV/">Atividades</a></li>  <!-- Atividades -->
+        <li><a href="#">Galeria</a></li>  <!-- Gallery -->
+      </ul>
+    </div>
+    
+    <!-- ===== SECTION 3: SOCIAL MEDIA ===== -->
+    <div class="footer-section">
+      <h3>Siga-nos</h3>
+      <div class="social-icons">
+        <!-- Social links - replace # with actual URLs -->
+        <a href="#"><i class="icon">📱</i> Instagram</a>  <!-- Instagram profile -->
+        <a href="#"><i class="icon">📱</i> Facebook</a>  <!-- Facebook page -->
+      </div>
+
+    </div>
+    
+    <!-- ===== SECTION 4: NEWSLETTER ===== -->
+    <div class="footer-section">
+      <h3>Receba Ofertas</h3>  <!-- Newsletter title -->
+      <form class="newsletter-form">  <!-- Would need backend integration -->
+        <input type="email" placeholder="Seu e-mail">  <!-- Email input -->
+        <button type="submit">Assinar</button>  <!-- Submit button -->
+      </form>
+      <p>Cadastre-se para receber promoções exclusivas!</p>  <!-- Call to action -->
+    </div>
+  </div>
+  
+  <!-- ===== COPYRIGHT BAR ===== -->
+  <div class="footer-bottom">
+    <p>© 2025 Site programado por Leonardo Nardy - Todos os direitos reservados</p>  <!-- Copyright notice -->
+  </div>
+</footer>
+
+<!-- 
+  FOOTER STYLES:
+  The CSS provides a responsive layout that stacks sections on mobile
+  and uses a 4-column grid on larger screens. Color scheme matches the header.
+-->
+<style>
+  .site-footer {
+    background-color: #004080;  /* Dark blue background */
+    color: white;  /* White text */
+    padding: 40px 0 0;  /* Top padding only */
+    font-family: Arial, sans-serif;  /* Consistent font */
+  }
+  
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /* Responsive columns */
+    gap: 30px;  /* Space between sections */
+    max-width: 1200px;  /* Max content width */
+    margin: 0 auto;  /* Centered */
+    padding: 0 20px;  /* Side padding */
+  }
+  
+  .footer-section h3 {
+    color: #fff;
+    border-bottom: 2px solid #e74c3c;  /* Red underline for headings */
+    padding-bottom: 10px;
+    display: inline-block;  /* Makes border only as wide as text */
+  }
+  
+  .footer-section ul {
+    list-style: none;  /* Removes bullet points */
+    padding: 0;  /* Removes default padding */
+  }
+  
+  .footer-section li, 
+  .footer-section a {
+    color: #ddd;  /* Light gray text */
+    margin-bottom: 8px;  /* Space between items */
+    display: block;  /* Makes each item take full width */
+    text-decoration: none;  /* Removes underline from links */
+    transition: color 0.3s;  /* Smooth hover effect */
+  }
+  
+  .footer-section a:hover {
+    color: #e74c3c;  /* Red color on hover */
+  }
+  
+  .icon {
+    margin-right: 8px;  /* Space between icon and text */
+  }
+  
+  .social-icons a {
+    display: inline-block;  /* Allows side-by-side display */
+    margin-right: 15px;  /* Space between social icons */
+  }
+  
+  .trust-badges img {
+    height: 50px;  /* Fixed height for badges */
+    margin-right: 10px;  /* Space between badges */
+    margin-top: 15px;  /* Space above badges */
+  }
+  
+  .newsletter-form input {
+    padding: 10px;
+    width: 70%;  /* Input field width */
+    border: none;  /* Removes default border */
+    margin-bottom: 10px;  /* Space below input */
+  }
+  
+  .newsletter-form button {
+    padding: 10px 15px;
+    background-color: #e74c3c;  /* Red button */
+    color: white;
+    border: none;
+    cursor: pointer;  /* Changes cursor to pointer */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: #003366;  /* Slightly darker blue */
+    margin-top: 30px;  /* Space above copyright bar */
+    font-size: 0.9rem;  /* Slightly smaller text */
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .footer-container {
+      grid-template-columns: 1fr;  /* Stacks sections vertically */
+    }
+  }
+</style>
+
+
+<!-- 
+  =============================================
+  STICKY HEADER WITH MOBILE MENU - COMPLETE CODE
+  =============================================
+  This solution combines:
+  - Sticky header that remains visible while scrolling
+  - Responsive mobile menu with hamburger icon
+  - Smooth animations and interactions
+-->
+
+<!-- CSS STYLES -->
+<style>
+  /* ======================
+     HEADER STYLES 
+     ====================== */
+  
+  /* Base header styling - becomes sticky */
+  header {
+    position: sticky;    /* Makes header stick to top */
+    top: 0;              /* Position at top of viewport */
+    z-index: 1000;       /* Ensures header stays above other content */
+    background-color: #004080; /* Dark blue background */
+    padding: 15px 20px;  /* Comfortable spacing */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transitions for any changes */
+  }
+
+  /* ======================
+     DROPDOWN MENU STYLES 
+     ====================== */
+  
+  /* Container for the dropdown menu */
+  .dropdown-menu {
+    position: relative;  /* Needed for absolute positioning of dropdown */
+    display: inline-block; /* Allows menu to size naturally */
+  }
+
+  /* Menu button styling */
+  .dropdown-btn {
+    background: transparent; /* No background */
+    border: none;           /* Remove default border */
+    padding: 8px;          /* Comfortable click area */
+    display: flex;         /* For icon/text alignment */
+    align-items: center;   /* Vertical centering */
+    cursor: pointer;      /* Indicates clickable element */
+  }
+
+  /* Hamburger icon (3 lines) */
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column; /* Stack lines vertically */
+    justify-content: space-between; /* Even spacing */
+    width: 24px;          /* Reasonable mobile size */
+    height: 18px;         /* Total height of 3 lines */
+  }
+
+  /* Individual hamburger lines */
+  .hamburger-icon span {
+    display: block;
+    height: 2px;          /* Line thickness */
+    background: white;    /* Visible against dark header */
+    transition: all 0.3s; /* Smooth transform animations */
+  }
+
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    position: absolute;
+    top: 100%;           /* Positions below the button */
+    left: 0;
+    background: #003366;  /* Slightly darker than header */
+    min-width: 200px;    /* Minimum width */
+    border-radius: 4px;   /* Softened corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtle shadow */
+    opacity: 0;          /* Start invisible */
+    visibility: hidden;  /* Completely hidden */
+    transform: translateY(-10px); /* Starts slightly above */
+    transition: all 0.3s; /* Smooth reveal animation */
+  }
+
+  /* ======================
+     INTERACTIVE STATES 
+     ====================== */
+  
+  /* When menu is active (open) */
+  .dropdown-menu.active .dropdown-content {
+    opacity: 1;          /* Fully visible */
+    visibility: visible; /* Allows interaction */
+    transform: translateY(0); /* Final position */
+  }
+
+  /* Hamburger to X animation */
+  .dropdown-menu.active .hamburger-icon span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg); /* Top line -> diagonal */
+  }
+  .dropdown-menu.active .hamburger-icon span:nth-child(2) {
+    opacity: 0;          /* Middle line disappears */
+  }
+  .dropdown-menu.active .hamburger-icon span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg); /* Bottom line -> diagonal */
+  }
+
+  /* ======================
+     MOBILE RESPONSIVENESS 
+     ====================== */
+  @media (max-width: 768px) {
+    /* Hide "Menu" text on mobile */
+    .menu-text {
+      display: none;
+    }
+    
+    /* Adjust dropdown positioning */
+    .dropdown-content {
+      left: -50px; /* Better mobile alignment */
+    }
+  }
+</style>
+
+<!-- JAVASCRIPT FUNCTIONALITY -->
+<script>
+  // =================================
+  // MENU TOGGLE FUNCTIONALITY
+  // =================================
+  
+  // Toggle menu when button is clicked
+  document.querySelector('.dropdown-btn').addEventListener('click', function(e) {
+    e.stopPropagation(); // Prevent event from bubbling up
+    this.closest('.dropdown-menu').classList.toggle('active'); // Toggle active state
+  });
+
+  // Close menu when clicking anywhere else
+  document.addEventListener('click', function() {
+    const menu = document.querySelector('.dropdown-menu');
+    if (menu) {
+      menu.classList.remove('active'); // Remove active class
+    }
+  });
+
+  // =================================
+  // SCROLL EFFECTS
+  // =================================
+  
+  // Add scroll effect to header
+  window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    // Reduce padding when scrolled past 50px
+    header.style.padding = window.scrollY > 50 ? '10px 20px' : '15px 20px';
+  });
+</script>
+
+
+
+<!-- 
+  =============================================
+  STICKY HEADER WITH MOBILE MENU - COMPLETE CODE
+  =============================================
+  This solution combines:
+  - Sticky header that remains visible while scrolling
+  - Responsive mobile menu with hamburger icon
+  - Smooth animations and interactions
+-->
+<!-- CSS STYLES -->
+<style>
+  /* ======================
+     HEADER STYLES 
+     ====================== */
+  
+  /* Base header styling - becomes sticky */
+  header {
+    position: sticky;    /* Makes header stick to top */
+    top: 0;              /* Position at top of viewport */
+    z-index: 1000;       /* Ensures header stays above other content */
+    background-color: #004080; /* Dark blue background */
+    padding: 15px 20px;  /* Comfortable spacing */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transitions for any changes */
+  }
+
+  /* ======================
+     DROPDOWN MENU STYLES 
+     ====================== */
+  
+  /* Container for the dropdown menu */
+  .dropdown-menu {
+    position: relative;  /* Needed for absolute positioning of dropdown */
+    display: inline-block; /* Allows menu to size naturally */
+  }
+
+  /* Menu button styling */
+  .dropdown-btn {
+    background: transparent; /* No background */
+    border: none;           /* Remove default border */
+    padding: 8px;          /* Comfortable click area */
+    display: flex;         /* For icon/text alignment */
+    align-items: center;   /* Vertical centering */
+    cursor: pointer;      /* Indicates clickable element */
+  }
+
+  /* Hamburger icon (3 lines) */
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column; /* Stack lines vertically */
+    justify-content: space-between; /* Even spacing */
+    width: 24px;          /* Reasonable mobile size */
+    height: 18px;         /* Total height of 3 lines */
+  }
+
+  /* Individual hamburger lines */
+  .hamburger-icon span {
+    display: block;
+    height: 2px;          /* Line thickness */
+    background: white;    /* Visible against dark header */
+    transition: all 0.3s; /* Smooth transform animations */
+  }
+
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    position: absolute;
+    top: 100%;           /* Positions below the button */
+    left: 0;
+    background: #003366;  /* Slightly darker than header */
+    min-width: 200px;    /* Minimum width */
+    border-radius: 4px;   /* Softened corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtle shadow */
+    opacity: 0;          /* Start invisible */
+    visibility: hidden;  /* Completely hidden */
+    transform: translateY(-10px); /* Starts slightly above */
+    transition: all 0.3s; /* Smooth reveal animation */
+  }
+
+  /* ======================
+     INTERACTIVE STATES 
+     ====================== */
+  
+  /* When menu is active (open) */
+  .dropdown-menu.active .dropdown-content {
+    opacity: 1;          /* Fully visible */
+    visibility: visible; /* Allows interaction */
+    transform: translateY(0); /* Final position */
+  }
+
+  /* Hamburger to X animation */
+  .dropdown-menu.active .hamburger-icon span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg); /* Top line -> diagonal */
+  }
+  .dropdown-menu.active .hamburger-icon span:nth-child(2) {
+    opacity: 0;          /* Middle line disappears */
+  }
+  .dropdown-menu.active .hamburger-icon span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg); /* Bottom line -> diagonal */
+  }
+
+  /* ======================
+     MOBILE RESPONSIVENESS 
+     ====================== */
+  @media (max-width: 768px) {
+    /* Hide "Menu" text on mobile */
+    .menu-text {
+      display: none;
+    }
+    
+    /* Adjust dropdown positioning */
+    .dropdown-content {
+      left: -50px; /* Better mobile alignment */
+    }
+  }
+</style>
+
+<!-- JAVASCRIPT FUNCTIONALITY -->
+<script>
+  // =================================
+  // MENU TOGGLE FUNCTIONALITY
+  // =================================
+  
+  // Toggle menu when button is clicked
+  document.querySelector('.dropdown-btn').addEventListener('click', function(e) {
+    e.stopPropagation(); // Prevent event from bubbling up
+    this.closest('.dropdown-menu').classList.toggle('active'); // Toggle active state
+  });
+
+  // Close menu when clicking anywhere else
+  document.addEventListener('click', function() {
+    const menu = document.querySelector('.dropdown-menu');
+    if (menu) {
+      menu.classList.remove('active'); // Remove active class
+    }
+  });
+
+  // =================================
+  // SCROLL EFFECTS
+  // =================================
+  
+  // Add scroll effect to header
+  window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    // Reduce padding when scrolled past 50px
+    header.style.padding = window.scrollY > 50 ? '10px 20px' : '15px 20px';
+  });
+</script>
+<!-- 
+  =============================================
+  STICKY HEADER WITH MOBILE MENU - COMPLETE CODE
+  =============================================
+  This solution combines:
+  - Sticky header that remains visible while scrolling
+  - Responsive mobile menu with hamburger icon
+  - Smooth animations and interactions
+-->
+
+</body>
+</html>
