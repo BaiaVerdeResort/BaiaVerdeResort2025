@@ -53,7 +53,6 @@ html {
 </head>
 <body>
 
-<button class="reservar-btn">Reservar</button>
 
 
 <!-- 
@@ -340,10 +339,11 @@ document.querySelectorAll('.dropdown-btn').forEach(btn => {
 <!-- SEÇÃO DE ACOMODAÇÕES COMPACTA -->
 <section id="acomodacoes" class="massagem-section">
   <div class="container">
-    <h2>Nossas Acomodações</h2>
-    <p class="section-description">
+    <h2 style="color: #004080; font-size: 2rem; margin-bottom: 15px; text-align: center; width: 100%;">Nossas Acomodações</h2>
+    <p style="color: #555; max-width: 700px; margin: 0 auto; text-align: center;">
       Conheça nossos quartos e escolha o ideal para sua estadia
     </p>
+  </br>
     
     <div class="quartos-grid-compact">
       <!-- Quarto Duplo -->
@@ -573,6 +573,196 @@ document.querySelectorAll('.dropdown-btn').forEach(btn => {
     images[newIndex].classList.add('active');
   }
 </script>
+
+
+
+<!-- ============================================
+     SEÇÃO DO RESTAURANTE COM SLIDESHOWS
+     ============================================ -->
+<section id="restaurante" style="padding: 60px 0; background-color: #f9f9f9;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    
+    <!-- Título e Descrição -->
+    <div style="text-align: center; margin-bottom: 40px;">
+      <h2 style="color: #004080; font-size: 2rem; margin-bottom: 15px;">Restaurante Baia Verde</h2>
+      <p style="color: #555; max-width: 700px; margin: 0 auto;">
+        Desfrute de uma experiência gastronômica única com pratos locais e internacionais, 
+        preparados com ingredientes frescos e uma vista deslumbrante para o mar.
+      </p>
+    </div>
+
+    <!-- Área Principal do Restaurante -->
+    <div style="margin-bottom: 50px;">
+      <h3 style="color: #004080; text-align: center; margin-bottom: 20px;">Pequeno Almoço</h3>
+      <div class="slideshow-container" style="position: relative; max-width: 800px; margin: 0 auto; height: 400px; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        
+        <!-- Slides do ambiente -->
+        <img src="breakfast00.jpg" alt="Ambiente do Restaurante" class="active-slide" style="width: 100%; height: 100%; object-fit: cover; position: absolute; transition: opacity 0.5s;">
+        <img src="breakfast01.jpg" alt="Ambiente do Restaurante" class="active-slide" style="width: 100%; height: 100%; object-fit: cover; position: absolute; transition: opacity 0.5s;">
+        <img src="breakfast02.jpg" alt="Ambiente do Restaurante" class="active-slide" style="width: 100%; height: 100%; object-fit: cover; position: absolute; transition: opacity 0.5s;">
+        <img src="breakfast03.jpg" alt="Ambiente do Restaurante" class="active-slide" style="width: 100%; height: 100%; object-fit: cover; position: absolute; transition: opacity 0.5s;">
+        <img src="breakfast04.jpg" alt="Ambiente do Restaurante" class="active-slide" style="width: 100%; height: 100%; object-fit: cover; position: absolute; transition: opacity 0.5s;">
+        <img src="breakfast05.jpg" alt="Ambiente do Restaurante" class="active-slide" style="width: 100%; height: 100%; object-fit: cover; position: absolute; transition: opacity 0.5s;">
+        <img src="breakfast06.jpg" alt="Ambiente do Restaurante" class="active-slide" style="width: 100%; height: 100%; object-fit: cover; position: absolute; transition: opacity 0.5s;">
+        <img src="breakfast07.jpg" alt="Ambiente do Restaurante" class="active-slide" style="width: 100%; height: 100%; object-fit: cover; position: absolute; transition: opacity 0.5s;">
+        <img src="breakfast08.jpg" alt="Ambiente do Restaurante" class="active-slide" style="width: 100%; height: 100%; object-fit: cover; position: absolute; transition: opacity 0.5s;">
+        <img src="breakfast09.jpg" alt="Ambiente do Restaurante" class="active-slide" style="width: 100%; height: 100%; object-fit: cover; position: absolute; transition: opacity 0.5s;">
+        <img src="breakfast10.jpg" alt="Ambiente do Restaurante" class="active-slide" style="width: 100%; height: 100%; object-fit: cover; position: absolute; transition: opacity 0.5s;">
+        <img src="breakfast11.jpg" alt="Ambiente do Restaurante" class="active-slide" style="width: 100%; height: 100%; object-fit: cover; position: absolute; transition: opacity 0.5s;">
+        <img src="breakfast12.jpg" alt="Ambiente do Restaurante" class="active-slide" style="width: 100%; height: 100%; object-fit: cover; position: absolute; transition: opacity 0.5s;">
+        <img src="breakfast13.jpg" alt="Ambiente do Restaurante" class="active-slide" style="width: 100%; height: 100%; object-fit: cover; position: absolute; transition: opacity 0.5s;">
+        
+        <!-- Navegação do slideshow -->
+        <button class="slide-nav prev" onclick="navigateRestaurantSlide(this.parentNode, -1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 10;">‹</button>
+        <button class="slide-nav next" onclick="navigateRestaurantSlide(this.parentNode, 1)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 10;">›</button>
+      </div>
+    </div>
+
+    <!-- Destaques Gastronômicos -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+      
+      <!-- Card 1 - Pratos Principais -->
+      <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div class="slideshow-compact" style="position: relative; height: 200px;">
+          <img src="PratosPrincipais00.jpg" alt="Peixe Fresco" class="active" style="width: 100%; height: 100%; object-fit: cover; position: absolute; opacity: 1; transition: opacity 0.5s;">
+          <img src="PratosPrincipais01.jpg" alt="Peixe Fresco" class="active" style="width: 100%; height: 100%; object-fit: cover; position: absolute; opacity: 1; transition: opacity 0.5s;">
+          <img src="PratosPrincipais02.jpg" alt="Peixe Fresco" class="active" style="width: 100%; height: 100%; object-fit: cover; position: absolute; opacity: 1; transition: opacity 0.5s;">
+          <img src="PratosPrincipais03.jpg" alt="Peixe Fresco" class="active" style="width: 100%; height: 100%; object-fit: cover; position: absolute; opacity: 1; transition: opacity 0.5s;">
+          <button class="slide-nav prev" onclick="navigateFoodSlide(this.parentNode, -1)" style="position: absolute; left: 5px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; width: 30px; height: 30px; border-radius: 50%; font-size: 16px; cursor: pointer; z-index: 10;">‹</button>
+          <button class="slide-nav next" onclick="navigateFoodSlide(this.parentNode, 1)" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; width: 30px; height: 30px; border-radius: 50%; font-size: 16px; cursor: pointer; z-index: 10;">›</button>
+        </div>
+        <div style="padding: 20px;">
+          <h3 style="color: #004080; margin: 0 0 10px;">Pratos Principais</h3>
+          <p style="color: #666; margin: 0;">Peixes frescos, carnes e especialidades locais</p>
+        </div>
+      </div>
+      
+      <!-- Card 2 - Sobremesas -->
+      <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div class="slideshow-compact" style="position: relative; height: 200px;">
+          <img src="SobremesasTropicais00.jpg" alt="Sobremesa Tropical" class="active" style="width: 100%; height: 100%; object-fit: cover; position: absolute; opacity: 1; transition: opacity 0.5s;">
+          <img src="SobremesasTropicais01.jpg" alt="Sobremesa Tropical" class="active" style="width: 100%; height: 100%; object-fit: cover; position: absolute; opacity: 1; transition: opacity 0.5s;">
+          <img src="SobremesasTropicais02.jpg" alt="Sobremesa Tropical" class="active" style="width: 100%; height: 100%; object-fit: cover; position: absolute; opacity: 1; transition: opacity 0.5s;">
+          <button class="slide-nav prev" onclick="navigateFoodSlide(this.parentNode, -1)" style="position: absolute; left: 5px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; width: 30px; height: 30px; border-radius: 50%; font-size: 16px; cursor: pointer; z-index: 10;">‹</button>
+          <button class="slide-nav next" onclick="navigateFoodSlide(this.parentNode, 1)" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; width: 30px; height: 30px; border-radius: 50%; font-size: 16px; cursor: pointer; z-index: 10;">›</button>
+        </div>
+        <div style="padding: 20px;">
+          <h3 style="color: #004080; margin: 0 0 10px;">Sobremesas Tropicais</h3>
+          <p style="color: #666; margin: 0;">Doces e frutas frescas da ilha</p>
+        </div>
+      </div>
+      
+      <!-- Card 3 - Bar e Drinks -->
+      <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div class="slideshow-compact" style="position: relative; height: 200px;">
+          <img src="BarTropical00.jpg" alt="Coquetel Tropical" class="active" style="width: 100%; height: 100%; object-fit: cover; position: absolute; opacity: 1; transition: opacity 0.5s;">
+          <img src="BarTropical01.jpg" alt="Coquetel Tropical" class="active" style="width: 100%; height: 100%; object-fit: cover; position: absolute; opacity: 1; transition: opacity 0.5s;">
+          <img src="BarTropical02.jpg" alt="Coquetel Tropical" class="active" style="width: 100%; height: 100%; object-fit: cover; position: absolute; opacity: 1; transition: opacity 0.5s;">
+          <img src="BarTropical03.jpg" alt="Coquetel Tropical" class="active" style="width: 100%; height: 100%; object-fit: cover; position: absolute; opacity: 1; transition: opacity 0.5s;">
+          <button class="slide-nav prev" onclick="navigateFoodSlide(this.parentNode, -1)" style="position: absolute; left: 5px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; width: 30px; height: 30px; border-radius: 50%; font-size: 16px; cursor: pointer; z-index: 10;">‹</button>
+          <button class="slide-nav next" onclick="navigateFoodSlide(this.parentNode, 1)" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; width: 30px; height: 30px; border-radius: 50%; font-size: 16px; cursor: pointer; z-index: 10;">›</button>
+        </div>
+        <div style="padding: 20px;">
+          <h3 style="color: #004080; margin: 0 0 10px;">Bar Tropical</h3>
+          <p style="color: #666; margin: 0;">Coquetéis artesanais e drinks especiais</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botão de Reservas -->
+    <div style="text-align: center; margin-top: 40px;">
+      <button style="background-color: #e74c3c; color: white; border: none; padding: 12px 30px; border-radius: 5px; font-weight: bold; cursor: pointer; transition: background 0.3s; font-size: 1rem;">
+        Reservar Mesa
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SCRIPTS PARA OS SLIDESHOWS
+     ============================================ -->
+<script>
+  // Navegação para o slideshow principal do restaurante
+  function navigateRestaurantSlide(container, direction) {
+    const slides = container.querySelectorAll('img');
+    let currentIndex = 0;
+    
+    // Encontra o slide ativo
+    slides.forEach((slide, index) => {
+      if (slide.style.opacity === '1' || slide.classList.contains('active-slide')) {
+        currentIndex = index;
+        slide.style.opacity = '0';
+        slide.classList.remove('active-slide');
+      }
+    });
+    
+    // Calcula novo índice
+    let newIndex = currentIndex + direction;
+    if (newIndex >= slides.length) newIndex = 0;
+    if (newIndex < 0) newIndex = slides.length - 1;
+    
+    // Ativa novo slide
+    slides[newIndex].style.opacity = '1';
+    slides[newIndex].classList.add('active-slide');
+  }
+
+  // Navegação para os slideshows de comida
+  function navigateFoodSlide(container, direction) {
+    const slides = container.querySelectorAll('img');
+    let currentIndex = 0;
+    
+    slides.forEach((slide, index) => {
+      if (slide.style.opacity === '1' || slide.classList.contains('active')) {
+        currentIndex = index;
+        slide.style.opacity = '0';
+        slide.classList.remove('active');
+      }
+    });
+    
+    let newIndex = currentIndex + direction;
+    if (newIndex >= slides.length) newIndex = 0;
+    if (newIndex < 0) newIndex = slides.length - 1;
+    
+    slides[newIndex].style.opacity = '1';
+    slides[newIndex].classList.add('active');
+  }
+
+  // Auto-rotate para o slideshow principal (opcional)
+  setInterval(() => {
+    const mainSlideshow = document.querySelector('.slideshow-container');
+    if (mainSlideshow) {
+      navigateRestaurantSlide(mainSlideshow, 1);
+    }
+  }, 5000);
+</script>
+
+<!-- ============================================
+     ESTILOS ADICIONAIS
+     ============================================ -->
+<style>
+  /* Efeitos de hover */
+  #restaurante button:hover {
+    background-color: #c0392b !important;
+  }
+  
+  .slide-nav:hover {
+    background: rgba(0,0,0,0.8) !important;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .slideshow-container {
+      height: 300px !important;
+    }
+    
+    #restaurante .slide-nav {
+      width: 35px !important;
+      height: 35px !important;
+    }
+  }
+</style>
+
+
 
 
 
@@ -1038,6 +1228,198 @@ document.querySelectorAll('.dropdown-btn').forEach(btn => {
   - Responsive mobile menu with hamburger icon
   - Smooth animations and interactions
 -->
+
+
+<!-- Modal de Reservas -->
+<!-- Modal de Reservas -->
+<!-- Modal de Reservas -->
+<div id="modalReserva" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7);">
+  <div style="background-color: #f9f9f9; margin: 5% auto; padding: 25px; border-radius: 8px; width: 90%; max-width: 600px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <span id="fecharModal" style="float: right; font-size: 24px; cursor: pointer;">&times;</span>
+    <h2 style="color: #004080; margin-bottom: 20px; text-align: center;">Faça sua Reserva</h2>
+    
+    <form id="formReserva">
+      <div style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px; color: #555;">Nome Completo:</label>
+        <input type="text" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+      </div>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+        <div>
+          <label style="display: block; margin-bottom: 5px; color: #555;">Check-in:</label>
+          <input type="date" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+        </div>
+        <div>
+          <label style="display: block; margin-bottom: 5px; color: #555;">Check-out:</label>
+          <input type="date" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+        </div>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+        <div>
+          <label style="display: block; margin-bottom: 5px; color: #555;">Adultos:</label>
+          <input type="number" min="1" value="1" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+        </div>
+        <div>
+          <label style="display: block; margin-bottom: 5px; color: #555;">Crianças:</label>
+          <input type="number" min="0" value="0" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+        </div>
+      </div>
+      
+      <div style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px; color: #555;">Tipo de Quarto:</label>
+        <select required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+          <option value="">Selecione...</option>
+          <option value="individual">Quarto Individual</option>
+          <option value="casal">Quarto Casal</option>
+          <option value="twin">Quarto Twin</option>
+          <option value="duplex">Quarto Duplex</option>
+        </select>
+      </div>
+      
+      <div style="margin-bottom: 25px;">
+        <label style="display: block; margin-bottom: 5px; color: #555;">Pequeno Almoço:</label>
+        <div>
+          <input type="radio" id="cafeSim" name="cafe" value="incluido" checked style="margin-right: 5px;">
+          <label for="cafeSim" style="margin-right: 15px; color: #555;">Incluído</label>
+          
+          <input type="radio" id="cafeNao" name="cafe" value="nao-incluido" style="margin-right: 5px;">
+          <label for="cafeNao" style="color: #555;">Não Incluído</label>
+        </div>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+        <button type="button" id="enviarEmail" style="background-color: #e74c3c; color: white; border: none; padding: 12px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.3s;">
+          Pedir Reserva por Email
+        </button>
+        <button type="button" id="enviarWhatsApp" style="background-color: #25D366; color: white; border: none; padding: 12px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.3s;">
+          Pedir Reserva por WhatsApp
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Controle do Modal
+  const reservarBtn = document.querySelector('.reservar-btn');
+  const modal = document.getElementById('modalReserva');
+  const fecharModal = document.getElementById('fecharModal');
+  
+  reservarBtn.addEventListener('click', function() {
+    modal.style.display = 'block';
+  });
+  
+  fecharModal.addEventListener('click', function() {
+    modal.style.display = 'none';
+  });
+  
+  window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+  
+  document.getElementById('enviarEmail').addEventListener('click', function() {
+    const form = document.getElementById('formReserva');
+    if (form.checkValidity()) {
+        // Coletar dados
+        const nome = form.querySelector('input[type="text"]').value;
+        const checkIn = form.querySelectorAll('input[type="date"]')[0].value;
+        const checkOut = form.querySelectorAll('input[type="date"]')[1].value;
+        const adultos = form.querySelectorAll('input[type="number"]')[0].value;
+        const criancas = form.querySelectorAll('input[type="number"]')[1].value;
+        const quarto = form.querySelector('select').value;
+        const cafe = form.querySelector('input[name="cafe"]:checked').value;
+
+        // Criar link mailto com todos os dados
+        const assunto = "Nova Reserva - Baia Verde Resort";
+        const corpo = `
+            Nome: ${nome}%0D%0A
+            Check-in: ${checkIn}%0D%0A
+            Check-out: ${checkOut}%0D%0A
+            Adultos: ${adultos}%0D%0A
+            Crianças: ${criancas}%0D%0A
+            Tipo de Quarto: ${quarto}%0D%0A
+            Pequeno Almoço: ${cafe === 'incluido' ? 'Incluído' : 'Não Incluído'}%0D%0A%0D%0A
+            Por favor, confirme esta reserva.`;
+
+        // Abre o cliente de email padrão do usuário
+        window.location.href = `mailto:baiaverde.penareia2024@gmail.com?subject=${assunto}&body=${corpo}`;
+        
+        // Feedback para o usuário
+        alert('Seu cliente de email será aberto. Por favor, envie a mensagem para concluir a reserva.');
+        modal.style.display = 'none';
+    } else {
+        alert('Por favor, preencha todos os campos obrigatórios.');
+    }
+});
+  
+  document.getElementById('enviarWhatsApp').addEventListener('click', function() {
+    const form = document.getElementById('formReserva');
+    if (form.checkValidity()) {
+        const nome = form.querySelector('input[type="text"]').value;
+        const checkIn = form.querySelectorAll('input[type="date"]')[0].value;
+        const checkOut = form.querySelectorAll('input[type="date"]')[1].value;
+        const adultos = form.querySelectorAll('input[type="number"]')[0].value;
+        const criancas = form.querySelectorAll('input[type="number"]')[1].value;
+        const quarto = form.querySelector('select').value;
+        const cafe = form.querySelector('input[name="cafe"]:checked').value;
+        
+        // Formatação de data para DD/MM/AAAA
+        const formatarData = (dataISO) => {
+            const [ano, mes, dia] = dataISO.split('-');
+            return `${dia}/${mes}/${ano}`;
+        };
+
+        // Mensagem formatada para WhatsApp (com emoji e negritos)
+        const mensagem = `🏨 *RESERVA - Baia Verde Resort* %0A%0A` +
+                         `*Nome:* ${nome}%0A` +
+                         `*Check-in:* ${formatarData(checkIn)}%0A` +
+                         `*Check-out:* ${formatarData(checkOut)}%0A` +
+                         `*Adultos:* ${adultos}%0A` +
+                         `*Crianças:* ${criancas}%0A` +
+                         `*Quarto:* ${quarto.replace("Quarto ", "")}%0A` +
+                         `*Café da manhã:* ${cafe === 'incluido' ? '✅ Incluído' : '❌ Não incluso'}%0A%0A` +
+                         `_Por favor, confirme esta reserva._`;
+        
+        // Número formatado (Cabo Verde: +238)
+        window.open(`https://wa.me/2385293721?text=${mensagem}`, '_blank');
+        modal.style.display = 'none';
+    } else {
+        alert('Por favor, preencha todos os campos obrigatórios.');
+    }
+});
+</script>
+
+<style>
+  /* Efeitos hover para os botões */
+  #enviarEmail:hover {
+    background-color: #c0392b !important;
+  }
+  
+  #enviarWhatsApp:hover {
+    background-color: #128C7E !important;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 600px) {
+    #modalReserva > div {
+      width: 95%;
+      margin: 10% auto;
+    }
+    
+    #formReserva > div {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>
+<!-- Modal de Reservas -->
+<!-- Modal de Reservas -->
+<!-- Modal de Reservas -->
+
+
+
 
 </body>
 </html>
